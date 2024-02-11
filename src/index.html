@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Форма обратной связи</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p>Модальное окно</p>
+                <button id="close-modal">Закрыть</button>
+            </div>
+        </div>
+        <button id="open-modal">Открыть модальное окно</button>
+        <h1 class="title">Форма обратной связи</h1>
+        <form id="form">
+            <label>Имя</label>
+            <input name="name" type="text" placeholder="Имя" minlength="2" pattern="^[А-Яа-яЁёa-zA-Z]{2,}$" required>
+            <p class="warning"></p>
+            <label>E-mail</label>
+            <input name="email" type="email" placeholder="E-mail" pattern="^[0-9a-z]+@[^ ]+\.[a-z]{2,3}$" required>
+            <p class="warning"></p>
+            <label>Телефон</label>
+            <input name="phone" type="text" placeholder="+375(25|29|33|44)999-99-99"
+                pattern="^\+375\((25|29|33|44)\)[0-9]{3}-[0-9]{2}-[0-9]{2}$" inputmode="numeric" required>
+            <p class="warning"></p>
+            <label>Сообщение</label>
+            <textarea name="message" placeholder="Сообщение" pattern="[a-zA-Zа-яА-Я].*" required></textarea>
+            <p class="warning"></p>
+            <button>Отправить</button>
+        </form>
+    </div>
+</body>
+
+</html>
